@@ -1,7 +1,13 @@
-jasmine-node-jquery-matchers
+jasmine-node-jquery-matchers in JavaScript
 ======
 
 jQuery matchers for Jasmine for usage under Node.js environment.
+Forked from [rosenfeld's CoffeeScript version](https://github.com/rosenfeld/jasmine-node-jquery-matchers). Since Mr. Rosenfeld doesn't want PRs for a JavaScript version on his project,
+I'm putting this up for those who don't want the CoffeeScript dependency.
+
+The only difference between this and Mr. Rosenfeld's version is that his is in CoffeeScript
+and mine is compiled to JavaScript (with appropriate changes made to the package.json file).
+Version numbers are also the same.
 
 The matchers were extracted from [jasmine-jquery](https://github.com/velesin/jasmine-jquery).
 
@@ -9,10 +15,9 @@ Go check for the available selectors documentation there. Besides those ones, th
 matchers were added to this package: toBeCssHidden, toBeCssVisible, toBeAllHidden, toBeAllVisible,
 toBeAllCssHidden, toBeAllCssVisible, toHaveAttrs and toHaveCss.
 
-Differences
+Differences from jasmine-jquery
 ------
 
-I use jsdom for writing my specs against my JavaScript/CoffeeScript code.
 It seems that the ":hidden" and ":visible" jQuery selectors don't work
 correctly under jsdom yet if you're using some CSS class with the 'display'
 attribute set (eg.: _.hidden { display: none }_). CSS support needs to be improved in jsdom.
@@ -81,10 +86,3 @@ q: Why should I use this untested code?
 
 a: You don't need to. But the code is probably smaller than this README, so you
 should really take a look at it and check if it would help you by yourself.
-
-q: Can I send you a pull request removing the CoffeeScript dependency?
-
-a: No! Really? I can't believe you asked me this! I really HATE JavaScript, as
-they hurt my eyes. And although CoffeeScript is not able to support require/import
-statements as it needs to compile to JavaScript, at least it is still the best
-alternative to JavaScript that I'm aware about...
