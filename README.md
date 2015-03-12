@@ -29,7 +29,7 @@ options.hiddenClass ("hidden" by default).
 Installation
 ------
 
-    npm install git://github.com/rosenfeld/jasmine-node-jquery-matchers
+    npm install git://github.com/danascheider/jasmine-node-jquery-matchers
 
 Usage
 ------
